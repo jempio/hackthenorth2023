@@ -1,16 +1,27 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, SafeAreaView, TextInput } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView, TextInput, Button} from 'react-native';
+import * as Speech from 'expo-speech';
 
-const TextBox: React.FC = () => {
-  const [userName, setUserName] = useState<string>('');
+function TextBox() {
+  const [inputText, setInputText] = useState('');
+
+  const speak = () => {
+    const thingToSay = inputText;
+    Speech.speak(thingToSay);
+  };
 
   return (
-    <TextInput
-      value={userName}
-      onChangeText={(userName) => setUserName(userName)}
-      placeholder={'UserName'}
-      style={styles.input}
-    />
+    <SafeAreaView style={{flex:1}}>
+      <View style={styles.container}>
+        <TextInput
+          value={inputText}
+          onChangeText={(inputText) => setInputText(inputText)}
+          placeholder={'Input something to hear!'}
+          style={styles.input}
+        />
+        <Button title="Pronounce" onPress={speak} />
+      </View>
+    </SafeAreaView>
   );
 };
 
