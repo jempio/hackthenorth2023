@@ -3,16 +3,13 @@ from taipy.gui import Html
 
 recordPage = Html("""
     <div class="container">
-        <h3> Pronunciation Game </h3>
+        <div class="game"> Pronunciation Game </div>
         <div class="middleGroup">
             <div class="resultsFlex">
                 <div class="resultsText">Your Results</div>
-                <div class="random">
-                    <div class="scoreContainer">
-                        <div class="score">95%</div>
-                        <div class="score2">Accuracy</div>
-                    </div>
-                    <div class="feedback">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="scoreContainer">
+                    <div class="score">95%</div>
+                    <div class="score2">Accuracy</div>
                 </div>
                 <div class="listenContainer">
                     <taipy:button class="playButton" on_action="button_action_function_name">.</taipy:button>
