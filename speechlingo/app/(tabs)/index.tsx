@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ChatButton from '../../components/chatButton'; // Import the ChatButton component
-//import GameRules from '../../components/gameRules';
+import GameRules from '../../components/gameRules';
 import handleChatRequest from '../../components/handleChatRequest'; // Import the handleChatRequest function
 
 export default function TabOneScreen() {
@@ -22,6 +22,7 @@ export default function TabOneScreen() {
       <View
         style={styles.separator}
       />
+      <GameRules/>
       <ChatButton onRequest={onRequest} />
       {response && (
         <>
@@ -38,14 +39,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#f9f5ed',
+    padding: '10%'
   },
   title: {
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#66283b',
   },
   separator: {
-    marginVertical: 30,
+    marginVertical: 15,
     height: 1,
     width: '80%',
   },
