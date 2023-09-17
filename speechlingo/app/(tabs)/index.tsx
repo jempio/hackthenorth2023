@@ -1,17 +1,22 @@
+<<<<<<< HEAD
 import { StyleSheet } from 'react-native';
 import RecordButton from '../../components/recording';
 
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
+=======
+import React, { useState } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import FirstState from '../../components/firstState';
+>>>>>>> 6a6b4850e8d3bf4b40554d28e61be1cff30adf44
 
 
 export default function TabOneScreen() {
+  const [response, setResponse] = useState('');
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-      <RecordButton />
+      <FirstState/>
     </View>
   );
 }
@@ -21,14 +26,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+    backgroundColor: '#f9f5ed',
+    padding: '10%',
   },
 });
+
