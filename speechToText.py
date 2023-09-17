@@ -1,38 +1,50 @@
-from gtts import gTTS
-from pydub import AudioSegment
+import sounddevice as sd
+import wavio
 import os
-import tempfile
-import speech_recognition as sr
+import webrtcvad
+import numpy as np
 
-# Initialize the recognizer
-recognizer = sr.Recognizer()
+# Set the recording parameters
+sample_rate = 44100  # Sample rate in Hz
+output_directory = "users_speech"  # Replace with your desired directory
+filename = "my_speech.wav"  # Name of the audio file
 
-# Capture audio from the microphone
-with sr.Microphone() as source:
-    print("Say something:")
-    audio = recognizer.listen(source)
+# Ensure the output directory exists, create it if it doesn't
+if not os.path.exists(output_directory):
+    os.makedirs(output_directory)
 
-# Recognize the speech
-try:
-    text = recognizer.recognize_google(audio)
-    print("You said:", text)
+# Set the full path for the audio file
+output_path = os.path.join(output_directory, filename)
 
-    # Convert recognized text to speech using gTTS
-    tts = gTTS("You said: " + text)
+# Initialize VAD
+vad = webrtcvad.Vad()
+vad.set_mode(2)  # Use aggressive mode for voice detection
 
-    # Specify the directory where you want to save the audio file
-    save_directory = r'C:\Users\nitsu\Desktop\htn2023\hackthenorth2023\users_speech\\'
+print("Recording... (Speaking will trigger recording)")
 
-    # Save the speech as an audio file in the specified directory
-    audio_file_path = os.path.join(save_directory, "output.mp3")
-    tts.save(audio_file_path)
+# Initialize audio buffer
+audio_data = []
 
-    # # Convert the MP3 file to WAV format
-    # audio = AudioSegment.from_mp3(mp3_audio_file)
-    # wav_audio_file = os.path.join(save_directory, "output.wav")
-    # audio.export(wav_audio_file, format="wav")
+# Function to check if audio is non-silent
+def is_audio_active(samples):
+    return vad.is_speech(samples.tobytes(), sample_rate)
 
-except sr.UnknownValueError:
-    print("Sorry, could not understand your speech.")
-except sr.RequestError as e:
-    print("Error requesting speech recognition; {0}".format(e))
+# Start recording audio
+with sd.InputStream(callback=lambda indata, frames, time, status: audio_data.extend(indata)):
+    sd.sleep(1000)  # Initial recording will start when speech is detected
+
+    # Continue recording as long as there is active speech
+    while True:
+        audio_chunk = np.array(audio_data)
+        if is_audio_active(audio_chunk):
+            audio_data.clear()
+        else:
+            break  # Stop recording when speech stops
+
+# Stop recording
+print("Recording stopped")
+
+# Save the recorded audio to the specified directory
+wavio.write(output_path, audio_chunk, sample_rate, sampwidth=3)
+
+print(f"Audio saved as {output_path}")
