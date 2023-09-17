@@ -1,17 +1,8 @@
-<<<<<<< Updated upstream
-import { StyleSheet } from 'react-native';
-import RecordButton from '../../components/recordButton';
-
-import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
-=======
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ChatButton from '../../components/chatButton'; // Import the ChatButton component
+//import GameRules from '../../components/gameRules';
 import handleChatRequest from '../../components/handleChatRequest'; // Import the handleChatRequest function
-import RecordButton from '../../components/recordButton'; // Import the RecordButton component
-import TextComponent from '../../components/textComponent'; // Import the RecordButton component
->>>>>>> Stashed changes
 
 export default function TabOneScreen() {
   const [response, setResponse] = useState('');
@@ -27,24 +18,16 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
-<<<<<<< Updated upstream
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-      <RecordButton />
-=======
-      <Text style={styles.title}>Pronunciation Scorer</Text>
+      <Text style={styles.title}>Pronunciation Game</Text>
       <View
         style={styles.separator}
       />
       <ChatButton onRequest={onRequest} />
       {response && (
         <>
-          <Text>Response:</Text>
           <Text>{response}</Text>
         </>
       )}
->>>>>>> Stashed changes
     </View>
   );
 }
