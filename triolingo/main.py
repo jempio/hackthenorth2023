@@ -35,7 +35,6 @@ def easy_callback(state):
         f.write(quote + '\n')
         f.write('Easy')
     refresh()
-    time.sleep(0.5)
     navigate(state, to='Challenge')
 
 def medium_callback(state):
@@ -44,7 +43,6 @@ def medium_callback(state):
         f.write(quote + '\n')
         f.write('Medium')
     refresh()
-    time.sleep(0.5)
     navigate(state, to='Challenge')
     
 def hard_callback(state):
@@ -53,7 +51,6 @@ def hard_callback(state):
         f.write(quote + '\n')
         f.write('Hard')
     refresh()
-    time.sleep(0.5)
     navigate(state, to='Challenge')
 
 
