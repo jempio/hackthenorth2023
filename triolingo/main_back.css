@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Mafins';
+    src: url('./Mafins.otf') ;
+    font-weight: bold;
+}
+body {
+    color: #66283B;
+    font-family: 'Helvetica Neue';
+}
+
+h1 {
+    font-family: 'Mafins';
+    font-size: 8vw;
+    margin: 0px
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 4vw;
+}
+.subContainer {
+    border-radius: 20px;
+    background: #DFBEBC;
+    width: 100%;
+    padding: 1em 3em;
+    margin-bottom: 5vh;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.button {
+    border-radius: 50px;
+    border-width: 2px;
+    width: 30%
+}
+.green {
+    background-color: #F5FFF3;
+    color: #4E7A45;
+    border-color: #A9DB9F;
+}
+.yellow {
+    background-color: #FDF8E6;
+    color: #ECC333;
+    border-color: #F5DB7E;
+}
+.red {
+    background-color: #F8F1F1;
+    color: #BA3F3F;
+    border-color: #F57E7E;
+}
+h3 {
+    font-family: 'Mafins';
+    font-size: 2vw;
+    margin: 0px
+}
+h2{
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+.recordTitle{
+    text-align: left;
+}
+.greenText{
+    color: #1E1E1E;
+}
+.subContainer2{
+    display: flex;
+    justify-content: space-between;
+}
+.record{
+    justify-content: space-around;
+    gap:10vh
+}
+.recordContainer{
+    background-color: #C2DFBC;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height:fit-content;
+    padding: 10px 15px;
+}
+.bubble{
+    color: #4E7A45;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid #A9DB9F;
+    background: #F5FFF3;
+    font-family: 'Helvetica Neue';
+    font-size: 1vw;
+    padding: 5px 10px;
+}
+.sentence{
+    color: #1E1E1E;
+    font-size: 3vw;
+    width:60%
+}
+.audioButtonContainer{
+    border-radius: 20px;
+    background: #DFBEBC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px 30px;
+}
+.redCircle{
+    margin-top: 10px;
+    width: 5vw;
+    height: 5vw;
+    background: #D65D5D;
+    border-radius: 50px;
+}
+
+h4{
+    font-weight: 700;
+    font-size: 1vw;
+    margin: 0px;
+}
+.lightRedText{
+    color: #D65D5D;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.button {
+    border-radius: 50px;
+    border-width: 2px;
+    width: 30%
+}
+.green {
+    background-color: #F5FFF3;
+    color: #4E7A45;
+    border-color: #A9DB9F;
+}
+.yellow {
+    background-color: #FDF8E6;
+    color: #ECC333;
+    border-color: #F5DB7E;
+}
+.red {
+    background-color: #F8F1F1;
+    color: #BA3F3F;
+    border-color: #F57E7E;
+}
+h3 {
+    font-family: 'Mafins';
+    font-size: 2vw;
+    margin: 0px
+}
