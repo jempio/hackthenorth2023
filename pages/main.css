@@ -19,25 +19,33 @@ h1 {
     height: 98vh;
     align-items: center;
     justify-content: center;
-    padding: 5vh 0;
+    padding: 5vh 5vw;
 }
 .subContainer {
     border-radius: 20px;
     background: #DFBEBC;
-    width: 100%;
+    width: 90%;
     padding: 1em 3em;
     margin-bottom: 5vh;
 }
+ol { 
+    padding-left: 1.6em; 
+}
 
+li {
+    font-size: 1.5vw;
+}
 .buttonContainer{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
 }
 .button {
     border-radius: 50px;
     border-width: 2px;
-    width: 30%
+    width: 25%;
+    font-size: 1.5vw;
+    font-weight: 600;
 }
 .green {
     background-color: #F5FFF3;
@@ -61,10 +69,13 @@ h3 {
 }
 h2{
     font-weight: 700;
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 .greenText{
     color: #1E1E1E;
+    text-align: end;
+    padding-top: 8vh;
+    padding-right: 2vw;
 }
 .subContainer2{
     display: flex;
@@ -72,18 +83,18 @@ h2{
 }
 .record{
     justify-content: space-around;
-    gap:10vh
+    gap:8vh;
 }
 .recordContainer{
     background-color: #C2DFBC;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     width: fit-content;
     height:fit-content;
-    padding: 10px 15px;
+    padding: 5vh 3vw;
 }
 .bubble{
     color: #4E7A45;
@@ -94,11 +105,13 @@ h2{
     font-family: 'Helvetica Neue';
     font-size: 1vw;
     padding: 5px 10px;
+    width: fit-content;
+    
 }
 .sentence{
     color: #1E1E1E;
     font-size: 3vw;
-    width:60%
+    height: fit-content;
 }
 .audioButtonContainer{
     border-radius: 20px;
@@ -108,7 +121,7 @@ h2{
     justify-content: center;
     align-items: center;
     width: 50%;
-    padding: 10px 30px;
+    padding: 3vh 5vw;
 }
 .redCircle{
     margin-top: 10px;
@@ -120,7 +133,7 @@ h2{
 
 h4{
     font-weight: 700;
-    font-size: 1vw;
+    font-size: 2vw;
     margin: 0px;
 }
 .lightRedText{
@@ -244,6 +257,7 @@ h3 {
     width: 40px;
     border-radius: 50px;
     background: #D65D5D;
+    color: #D65D5D;
 }
 .realSentence{
     color: #1E1E1E;

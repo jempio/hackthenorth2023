@@ -15,11 +15,11 @@ recordPage = Html("""
                     <div class="feedback">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                 </div>
                 <div class="listenContainer">
-                    <div class="playButton"></div>
+                    <taipy:button class="playButton" on_action="button_action_function_name">.</taipy:button>
                     <div class="AITidbit">Listen to AI say this sentence</div>
                 </div>
                 <div class="listenContainer">
-                    <div class="playButton"></div>
+                    <taipy:button class="playButton" on_action="button_action_function_name">.</taipy:button>
                     <div class="AITidbit">Listen to how you said this sentence</div>
                 </div>
             </div>

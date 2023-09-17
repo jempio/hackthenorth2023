@@ -5,11 +5,11 @@ recordPage = Html("""
     <div class="container record">
         <h3> Pronunciation Game </h3>
         <div class="subContainer2">
+            <h2 class="greenText">Record Yourself Saying</h2>
             <div class="recordContainer">
                   <div class="bubble">Easy Sentence</div>
-                  <h2 class="greenText">Record Yourself Saying</h2>
+                  <div class="sentence">The metal-carbon bond in organometallic compounds is generally highly covalent.</div>
             </div>
-            <div class="sentence">The metal-carbon bond in organometallic compounds is generally highly covalent.</div>
         </div>
         <div class="audioButtonContainer">
             <h4 class="lightRedText">Record Audio</h4>
