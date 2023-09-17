@@ -2,6 +2,17 @@ import { StyleSheet } from 'react-native';
 import TextBox from '../../components/textComponent';
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
+import { LogBox } from 'react-native';
+
+// Ignore specific warnings by adding a filter
+LogBox.ignoreLogs([
+  'Sending `Exponent.speakingStarted` with no listeners registered.',
+  'Sending `Exponent.speakingWillSayNextString` with no listeners registered.',
+  'Sending `Exponent.speakingDone` with no listeners registered.',
+]);
+
+// Enable LogBox (important to process the ignored warnings)
+LogBox.ignoreAllLogs(true);
 
 export default function TabTwoScreen() {
   return (
