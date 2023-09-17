@@ -3,7 +3,7 @@ from taipy.gui import Html
 
 recordPage = Html("""
     <div class="container record">
-        <h3 class="recordTitle"> Pronunciation Game </h3>
+        <h3> Pronunciation Game </h3>
         <div class="subContainer2">
             <div class="recordContainer">
                   <div class="bubble">Easy Sentence</div>

@@ -19,7 +19,7 @@ h1 {
     height: 98vh;
     align-items: center;
     justify-content: center;
-    padding: 5vh 4vw;
+    padding: 5vh 0;
 }
 .subContainer {
     border-radius: 20px;
@@ -56,15 +56,12 @@ h1 {
 }
 h3 {
     font-family: 'Mafins';
-    font-size: 2vw;
+    font-size: 3vw;
     margin: 0px
 }
 h2{
     font-weight: 700;
     font-size: 1.5vw;
-}
-.recordTitle{
-    text-align: left;
 }
 .greenText{
     color: #1E1E1E;
@@ -159,4 +156,127 @@ h3 {
     font-family: 'Mafins';
     font-size: 2vw;
     margin: 0px
+}
+
+.resultsFlex{
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    border-radius: 20px;
+    background: #DFBEBC;
+    padding:3vh 2.5vw 2vh 2.5vw;
+}
+.resultsText{
+    grid-area: "text";
+    color: #7A3B37;
+    font-family: "Mafins";
+    font-size: 3vw;
+    align-self: center;
+    padding-bottom: 2vh;
+}
+.scoreContainer{
+    grid-area: "score";
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #F5FAF4;
+    padding:5vh 1vw;
+}
+.score{
+    color: #7A3B37;
+    font-family: "Helvetica Neue";
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 10vh
+}
+.score2{
+    color: #7A3B37;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-size: 30px;
+}
+.small{
+    font-size:2vw;
+}
+.middleGroup{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    align-items: center;
+    padding-top: 4vh;
+}
+.random{
+    display: flex;
+    flex-direction: row;
+    column-gap:40px;
+    padding-bottom: 3vh;
+}
+.realSentence{
+    color: #1E1E1E;
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    width:50%
+}
+.feedback{
+    width: 40%;
+    color: #7A3B37;
+    font-family: "Helvetica Neue";
+    font-size: 2.8vh;
+    font-style: normal;
+    line-height: 125%;
+}
+.listenContainer{
+    border-radius: 50px;
+    background: #F5FAF4;
+    width: 100%;
+    padding: 1vh 1vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-bottom: 2vh;
+}
+.playButton{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background: #D65D5D;
+}
+.realSentence{
+    color: #1E1E1E;
+    font-family: "Helvetica Neue";
+    font-size: 40px;
+    line-height: 110.5%; /* 44.2px */
+    letter-spacing: -1.4px;
+}
+.options{
+    padding-top: 5vh;
+    display: flex;
+    gap: 2vw;
+}
+
+.bubbleRed{
+    color: #BA3F3F;
+    text-align: center;
+    border-radius: 50px;
+    font-weight: 500;
+    border: 2px solid #F57E7E;
+    background: #F8F1F1;
+    font-family: 'Helvetica Neue';
+    font-size: 3vh;
+    padding: 1vh 2vw;
+}
+.bubbleGreen{
+    color: #4E7A45;
+    text-align: center;
+    border-radius: 50px;
+    font-weight: 500;
+    border: 2px solid #A9DB9F;
+    background: #F5FFF3;
+    font-family: 'Helvetica Neue';
+    font-size: 3vh;
+    padding: 1vh 2vw;
 }
