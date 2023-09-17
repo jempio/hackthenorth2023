@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Mafins';
+    src: url('./Mafins.otf') ;
+    font-weight: bold;
+}
+body {
+    color: #66283B;
+}
+
+h1 {
+    font-family: 'Mafins';
+    font-size: 8vw;
+    margin: 0px
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 98vh;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 4vw;
+}
+.subContainer {
+    border-radius: 20px;
+    background: #DFBEBC;
+    width: 100%;
+    padding: 1em 3em;
+    margin-bottom: 5vh;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.button {
+    border-radius: 50px;
+    border-width: 2px;
+    width: 20vw
+}
+.green {
+    background-color: #F5FFF3;
+    color: #4E7A45;
+    border-color: #A9DB9F;
+}
+.yellow {
+    background-color: #FDF8E6;
+    color: #ECC333;
+    border-color: #F5DB7E;
+}
+.red {
+    background-color: #F8F1F1;
+    color: #BA3F3F;
+    border-color: #F57E7E;
+}
