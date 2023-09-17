@@ -30,27 +30,30 @@ pages = {
 }
 
 def easy_callback(state):
-    quote = api.get_completion("Please generate a new short, easy English sentence for children to learn.")
+    quote = api.get_completion("Please generate a unique, original, short, easy English sentence for children to learn.")
     with open('quote.txt', 'w') as f:
         f.write(quote + '\n')
         f.write('Easy')
     refresh()
+    time.sleep(0.5)
     navigate(state, to='Challenge')
 
 def medium_callback(state):
-    quote = api.get_completion("Please generate a new short English sentence for intermediate-level students to learn.")
+    quote = api.get_completion("Please generate a unique, original, short English sentence for intermediate-level students to learn.")
     with open('quote.txt', 'w') as f:
         f.write(quote + '\n')
         f.write('Medium')
     refresh()
+    time.sleep(0.5)
     navigate(state, to='Challenge')
     
 def hard_callback(state):
-    quote = api.get_completion("Please generate a new short English sentence for advanced-level students to learn.")
+    quote = api.get_completion("Please generate a unique, original, short English sentence for advanced-level students to learn.")
     with open('quote.txt', 'w') as f:
         f.write(quote + '\n')
         f.write('Hard')
     refresh()
+    time.sleep(0.5)
     navigate(state, to='Challenge')
 
 
