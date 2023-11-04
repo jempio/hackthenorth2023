@@ -6,4 +6,4 @@ In each mode, AccentAce harnesses the capabilities of the ChatGPT API to generat
 
 Created during Hack The North 2023
 
-[Check out our Devpost]([url](https://devpost.com/software/pronunciationgo)https://devpost.com/software/pronunciationgo)
+[Check out our Devpost]([url](https://devpost.com/software/pronunciationgo)
