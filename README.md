@@ -5,3 +5,5 @@ Within its user-friendly interface, you'll find three distinct modes to choose f
 In each mode, AccentAce harnesses the capabilities of the ChatGPT API to generate contextually relevant sentences that serve as practical exercises for pronunciation enhancement.
 
 Created during Hack The North 2023
+
+[Check out our Devpost]([url](https://devpost.com/software/pronunciationgo)https://devpost.com/software/pronunciationgo)
